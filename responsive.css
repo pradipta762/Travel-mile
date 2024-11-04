@@ -1,0 +1,58 @@
+@media screen and (max-width: 768px) {
+  .upper-navbar {
+    padding: 0.25rem 2rem;
+  }
+
+  .nav-link-section {
+    justify-content: space-between;
+    padding: 0.25rem 2rem;
+    align-items: center;
+  }
+
+  .nav-link-section ul {
+    display: none;
+  }
+
+  .ri-menu-3-line {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .upper-nav-social-links {
+    gap: 0.85rem;
+  }
+
+  .slider-text {
+    width: 100%;
+  }
+
+  .place-section {
+    margin-top: 5rem;
+  }
+
+  .description-part {
+    flex-direction: column;
+  }
+
+  .description-nav {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-widget {
+    padding: 2rem 0;
+  }
+
+  .insta-img-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insta-img-grid img {
+    width: 100%;
+  }
+
+  .footer-col {
+    border-right: none;
+  }
+
+}

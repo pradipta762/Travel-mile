@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --ff-heading: "Cormorant Garamond", serif;
+  --ff-body: "Mulish", sans-serif;
+
+  --primary-color: #ffffff;
+  --secondary-color: #1d1d1d;
+  --light-font-color: #7a7a7a;
+  --accecent-color: #77a096;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* ------------- Utility Classes ------------- */
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-wrapper {
+  padding: 50px 0;
+}
+
+.active {
+  color: var(--accecent-color);
+}
+
+.grid-three-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* ------------- Upper Navbar ------------- */
+
+.upper-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--accecent-color);
+  color: var(--primary-color);
+  padding: 0.25rem 8rem;
+}
+
+.upper-navbar i:hover {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.nav-newsletter span {
+  font-family: var(--ff-body);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.upper-nav-social-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ------------- Logo section ------------- */
+.logo {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.logo img {
+  text-align: center;
+  margin: auto;
+}
+
+/* ------------- Navigation Links Section ------------- */
+.nav-link-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+
+.nav-link-section i:hover {
+  cursor: pointer;
+  color: var(--accecent-color);
+}
+
+.nav-link-section ul {
+  display: flex;
+  align-items: center;
+  gap: 1.85rem;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-link-section ul li {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-family: var(--ff-body);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.nav-link-section ul li:hover {
+  color: var(--accecent-color);
+  transition: all 0.1s linear;
+}
+
+.search-section {
+  display: flex;
+  gap: 1rem ;
+}
+
+.ri-menu-3-line {
+  display: none;
+  font-weight: 600;
+  font-size: 1.85rem;
+}
+
+/* ------------- Hero Section ------------- */
+
+.slider, .slider-img {
+  position: relative;
+}
+
+.slider-img {
+  min-height: 100svh;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slider-text {
+  position: absolute;
+  bottom: 3.95rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.slider-des {
+  font-size: 1rem;
+  font-family: var(--ff-body);
+  margin-bottom: 1rem;
+}
+
+.slider-des span:first-child,
+.card-date span:first-child {
+  font-weight: bold;
+}
+
+.slider-heading {
+  font-size: 2.7rem;
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* ------------- Place section ------------- */
+
+.place-section {
+  margin-top: 10rem;
+}
+
+.place-card {
+  background-color: blue;
+  position: relative;
+}
+
+.place-card img {
+  max-height: 280px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2); 
+  color: #fff; 
+  padding: 20px; 
+  text-align: center;
+  inset: 0;
+}
+
+.overlay div {
+  border: 1px solid white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.place-card:hover {
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+.place-card:hover .place-card img {
+  transform: scale(1.1);
+}
+
+.overlay p {
+  font-size: 2.15rem;
+  text-transform: uppercase;
+  font-family: var(--ff-heading);
+}
+
+
+/* ------------- Description Section ------------- */
+
+.description-part {
+  display: flex;
+  gap: 2.25rem;
+}
+
+.card {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  font-family: var(--ff-body);
+  color: var(--light-font-color);
+  margin-bottom: 3.25rem;
+}
+
+.card:last-child,
+.sidebar-card:last-child {
+  border-bottom: none;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-text-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2.85rem;
+}
+
+.card-text-content h2 {
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-size: 1.9rem;
+}
+
+.card-description {
+  font-size: 1rem;
+  padding-inline: 1rem;
+}
+
+.card-read-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.card-read-more:hover .ri-arrow-right-line {
+  transform: translateX(20%);
+  transition: transform 0.3s ease;
+}
+
+/* ------------- Side bar ------------- */
+
+aside {
+  border-inline: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-card {
+  padding: 2rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  font-family: var(--ff-body);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-heading {
+  font-family: var(--ff-heading);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0.85rem;
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.img-grid img {
+  max-width: 100px;
+}
+
+.sidebar-widget {
+  padding: 4rem 0;
+}
+
+.sw-items p {
+  color: var(--light-font-color);
+  font-weight: 600;
+  margin-bottom: 5px;
+  transition: color 0.2s linear;
+}
+
+.sw-items p:hover {
+  color: var(--accecent-color);
+  cursor: pointer;
+}
+
+.email-susb {
+  /* background-color: rosybrown; */
+  display: flex;
+  border-radius: 50px;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.email-susb input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.email-susb i {
+  background-color: var(--accecent-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.description-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--light-font-color);
+  font-family: var(--ff-body);
+  margin: 5rem 0;
+}
+
+.description-nav i,
+.description-nav span {
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.description-nav i:hover,
+.description-nav span:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  color: var(--accecent-color);
+  cursor: pointer;
+}
+
+/* ------------- Instagram Page Section ------------- */
+
+.insta-content {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: var(--ff-body);
+}
+
+.insta-content h3 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-family: var(--ff-heading);
+  font-weight: 600;
+}
+
+.insta-content a {
+  color: var(--accecent-color);
+  font-weight: 700;
+}
+
+.insta-img-grid {
+  display: grid;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.insta-img-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ------------- Footer Section ------------- */
+
+.footer-col {
+  text-align: center;
+  margin: auto;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  padding-right: 2rem;
+  font-family: var(--ff-body);
+  color: var(--light-font-color);
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+.footer-col h4 {
+  font-family: var(--ff-heading);
+  color: var(--secondary-color);
+  font-size: 1.65rem;
+  margin-bottom: 1rem;
+}
+
+.col-2 {
+  grid-column: span 2;
+  font-size: 1.1rem;
+}
+
+.footer-social-link {
+  color: var(--secondary-color);
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.footer-social-link a:hover {
+  color: var(--accecent-color);
+  transition: color 0.2s linear;
+}
+
+.col-2 img {
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.footer-col:last-child {
+  border-right: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 5rem;
+  font-family: var(--ff-body);
+  font-size: 1.25rem;
+  color: var(--light-font-color);
+}
