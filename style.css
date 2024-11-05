@@ -365,6 +365,12 @@ aside {
   max-width: 100px;
 }
 
+.sidebar-card h4 {
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
 .sidebar-widget {
   padding: 4rem 0;
 }
